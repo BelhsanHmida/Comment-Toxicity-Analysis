@@ -1,6 +1,5 @@
 import sys
 import os
-import optuna
 
 from sklearn.metrics import r2_score
 
