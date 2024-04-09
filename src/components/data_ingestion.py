@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append(r'C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification')
+##sys.path.append(r'C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification')
 
 from dataclasses import dataclass
 
@@ -59,7 +59,7 @@ class DataIngestion:
 
     def initiate_data_ingestion(self):
         try:
-            df = self.read_data(r'C:\Users\hp\Desktop\New folder (2)\train.csv')
+            df = self.read_data(r'train.csv')
             df = df.sample(60)
             X = df['comment_text']
             y = df[df.columns[2:]].values

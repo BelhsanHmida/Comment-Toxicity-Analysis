@@ -44,7 +44,7 @@ class TextVectorizer:
         self.vectorizer = TextVectorization(max_tokens=max_tokens, 
                                             output_sequence_length=output_sequence_length, 
                                             output_mode=output_mode)
-        df = pd.read_csv(r'C:\Users\hp\Desktop\New folder (2)\train.csv')
+        df = pd.read_csv(r'train.csv')
         df = df.sample(60)
         self.X = df['comment_text']
     def fit(self):

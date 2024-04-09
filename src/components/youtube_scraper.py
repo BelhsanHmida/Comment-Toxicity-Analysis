@@ -1,7 +1,7 @@
 import sys
 import os 
 from dataclasses import dataclass
-sys.path.append(r'C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification')
+###sys.path.append(r'Comment-Toxicity-Classification')
 
 import pandas as pd
 import googleapiclient.discovery

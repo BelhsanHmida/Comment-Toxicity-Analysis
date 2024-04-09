@@ -8,5 +8,6 @@ matplotlib
 google-api-python-client
 pytube
 tensorflow
+pytube
 
 -e .
