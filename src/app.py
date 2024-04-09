@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'C:\Users\hp\Desktop\CommentToxicity\Comment-Toxicity-Classification')
+sys.path.append(r'Comment-Toxicity-Classification')
 import streamlit as st
 from pytube import YouTube
 from src.components.youtube_scraper import datascraping

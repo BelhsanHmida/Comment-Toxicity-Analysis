@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'C:\Users\hp\Desktop\CommentToxicity\Comment-Toxicity-Classification')
+sys.path.append(r'Comment-Toxicity-Classification')
 import os
 import tensorflow as tf
 from dataclasses import dataclass

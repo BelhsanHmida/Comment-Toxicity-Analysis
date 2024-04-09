@@ -1,6 +1,6 @@
 #After we trained our model from the model_train we can now mae predictions using the predict_pipeline.py
 import sys
-sys.path.append(r'C:\Users\hp\Desktop\CommentToxicity\Comment-Toxicity-Classification')
+sys.path.append(r'Comment-Toxicity-Classification')
 import os
 import pickle
 import tensorflow as tf

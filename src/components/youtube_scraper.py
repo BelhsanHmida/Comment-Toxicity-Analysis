@@ -1,7 +1,7 @@
 import sys
 import os 
 from dataclasses import dataclass
-sys.path.append(r'C:\Users\hp\Desktop\Datascience  Projects\CommentToxicity\Comment-Toxicity-Classification')
+sys.path.append(r'Comment-Toxicity-Classification')
 
 import pandas as pd
 import googleapiclient.discovery
@@ -10,8 +10,7 @@ from src.logger import logging
 from src.utils  import save_objects
 from src.exceptions import CustomException
 
-api_key = "AIzaSyBmzmmaxaFwezU2siJ4Lh4ui0mbzkimM3k"
-video_id = "Q0CbN8sfihY"
+
 
 @dataclass
 class datascraperConfig:
@@ -59,7 +58,4 @@ class datascraping:
                         )
         except Exception as e :
             raise CustomException(e,sys)
-scraper = datascraping()
-
-# Initiate scraping by calling the get_scraped_data method
-scraper.get_scraped_data(api_key, video_id)
+        return df
