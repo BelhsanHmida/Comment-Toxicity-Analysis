@@ -1,7 +1,7 @@
 import sys
 import os 
 from dataclasses import dataclass
-sys.path.append(r'Comment-Toxicity-Classification')
+sys.path.append(r'C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification')
 
 import pandas as pd
 import googleapiclient.discovery
@@ -48,7 +48,7 @@ class datascraping:
                     comment['textDisplay']
                 ])
 
-            df = pd.DataFrame(comments, columns=['author', 'published_at', 'updated_at', 'like_count', 'text'])
+            df = pd.DataFrame(comments, columns=['author', 'published_at', 'updated_at', 'like_count', 'comment_text'])
             logging.info("Youtube Data Scraper: Comments extracted successfully.")
             scraper_path=os.path.join('artifact',"scraped_data.csv")
 

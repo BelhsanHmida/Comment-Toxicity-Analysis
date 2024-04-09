@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'Comment-Toxicity-Classification')
+sys.path.append(r'C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification')
 import streamlit as st
 from pytube import YouTube
 from src.components.youtube_scraper import datascraping
@@ -50,8 +50,12 @@ def main():
         # Display the scraped comments
         st.subheader("Scraped Comments:")
         st.dataframe(df_comments)
+        model_path = r"C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification\artifact\model.h5"
+        vectorizer_path = r"C:\Users\hp\Desktop\New folder (3)\Comment-Toxicity-Classification\artifact\vectorizer.pkl"
+        toxicity = CommentToxicityPredictor(model_path,vectorizer_path)
+        toxicity.load_model_and_vectorizer()
+        toxicity =toxicity .predict_toxicity(df_comments)   
 
-        toxicity = CommentToxicityPredictor().predict_toxicity(df_comments)   
         st.subheader("Comments toxicity Analysis: ")
         st.dataframe(toxicity)
 
