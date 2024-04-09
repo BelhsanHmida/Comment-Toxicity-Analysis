@@ -4,12 +4,40 @@ import streamlit as st
 from pytube import YouTube
 from src.components.youtube_scraper import datascraping
 from src.pipelines.predict_pipeline import CommentToxicityPredictor
+import plotly.graph_objects as go
 
 def get_thumbnail_url(youtube_url):
     yt = YouTube(youtube_url)
     thumbnail_url = yt.thumbnail_url
     return thumbnail_url
 status=0
+
+def create_pie_plot(data, category):
+    toxic_color = '#ff0000'      # Red color
+    non_toxic_color = '#00ff00'  # Green color
+
+    # Count the number of toxic and non-toxic comments
+    num_toxic = data[category].sum()
+    num_non_toxic = len(data) - num_toxic
+
+    # Create the pie chart
+    fig = go.Figure(go.Pie(
+        labels=['Non-toxic', 'Toxic'],
+        values=[num_non_toxic, num_toxic],
+        hole=0.6,
+        marker=dict(colors=[non_toxic_color, toxic_color]),
+        textinfo='label+percent',
+    ))
+
+    # Update the layout
+    fig.update_layout(
+        title=f'Distribution of {category} Comments',
+        margin=dict(l=10, r=10, t=50, b=50),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)',
+    )
+
+    return fig
 def main():
     st.title("YouTube Comment Scraper")
 
@@ -58,6 +86,10 @@ def main():
 
         st.subheader("Comments toxicity Analysis: ")
         st.dataframe(toxicity)
+        
+        # Plotting pie charts for each toxicity category
+        for category in toxicity.columns[1:]:
+            st.plotly_chart(create_pie_plot(toxicity, category))
 
 
 if __name__ == "__main__":

@@ -32,7 +32,7 @@ class datascraping:
             request = youtube.commentThreads().list(
                 part="snippet",
                 videoId=video_id,
-                maxResults=200
+                maxResults=100
             )
             response = request.execute()
 
@@ -49,6 +49,10 @@ class datascraping:
                 ])
 
             df = pd.DataFrame(comments, columns=['author', 'published_at', 'updated_at', 'like_count', 'comment_text'])
+            last_column = df.columns[-1]
+
+            # Reorder the columns with the last column in the first place
+            df = df[[last_column] + [col for col in df.columns if col != last_column]]
             logging.info("Youtube Data Scraper: Comments extracted successfully.")
             scraper_path=os.path.join('artifact',"scraped_data.csv")
 
