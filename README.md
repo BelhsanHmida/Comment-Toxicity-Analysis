@@ -29,7 +29,7 @@ This project is a YouTube comment analysis app that scrapes comments from a give
 - TensorFlow
 - googleapiclient.discovery (for youtube comment scraping)
 
-  # Credits :
+# Credits :
   This project was developed by Mohamed Hmida.
 # License:
   This project is licensed under the MIT License.
