@@ -20,8 +20,8 @@ This project is a YouTube comment analysis app that scrapes comments from a give
 7. Run the app `python app.py`
 
 ## Models:
--Toxicity Model: Bidirectional LSTM model trained to classify comment toxicity levels.
--Vectorizer Model: Used to vectorize the text data for input to the toxicity model.
+- Toxicity Model: Bidirectional LSTM model trained to classify comment toxicity levels.
+- Vectorizer Model: Used to vectorize the text data for input to the toxicity model.
 
 # Technologies Used:
 - Python
