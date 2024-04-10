@@ -1,4 +1,4 @@
-# Youtube Toxicity Analysis App
+#🚀 Youtube Toxicity Analysis App
 Scrape and analyze any youtube video's comments !
 
 ## See it live and in action 📺
