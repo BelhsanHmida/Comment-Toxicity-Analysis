@@ -1,8 +1,8 @@
 # 🚀 Youtube Toxicity Analysis App
 This project is a YouTube comment analysis app that scrapes comments from a given YouTube video URL, classifies them according to a toxicity model, and provides an analysis of the comments based on their toxicity levels. The toxicity model utilized in this project is a Bidirectional LSTM model, and a vectorizer model is used to vectorize the text data.
-[Click here](https://github.com/BelhsanHmida/Comment-Toxicity-Classification/tree/4f67ce6d79b6847e8fbb39156c69379dadd34597) to go to the other README file.
+ to go to the other README file.
 
-## See it live and in action 📺
+## See Demo 📺 [Click here](https://github.com/BelhsanHmida/Comment-Toxicity-Classification/tree/4f67ce6d79b6847e8fbb39156c69379dadd34597)
 ![Project Picture](https://github.com/BelhsanHmida/Comment-Toxicity-Classification/blob/main/Project%20Picture.PNG?raw=true)
 
 ## Features:
