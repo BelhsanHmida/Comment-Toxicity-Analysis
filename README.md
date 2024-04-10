@@ -3,4 +3,3 @@
 ![Project Picture](https://github.com/BelhsanHmida/Comment-Toxicity-Classification/blob/master/Project%20Pics/Capture03.PNG?raw=true)
 ![Project Picture](https://github.com/BelhsanHmida/Comment-Toxicity-Classification/blob/master/Project%20Pics/Capture04.PNG?raw=true)
 ![Project Picture](https://github.com/BelhsanHmida/Comment-Toxicity-Classification/blob/master/Project%20Pics/Capture05.PNG?raw=true)
-![Uploading ezgif.com-video-to-gif-converter.gif…]()
