@@ -5,9 +5,9 @@ import pickle
 import tensorflow as tf
 import pandas as pd  
 import numpy as np
-from src.logger import logging
-from src.exceptions import CustomException
-from src.utils import TextVectorizer
+from ..logger import logging
+from ..exceptions import CustomException
+from ..utils import TextVectorizer
 class CommentToxicityPredictor:
     def __init__(self, model_path, vectorizer_path):
         self.model_path = model_path
