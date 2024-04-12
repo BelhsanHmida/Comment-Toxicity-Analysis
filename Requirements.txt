@@ -3,11 +3,11 @@ pandas
 numpy
 scikit-learn
 pickle
-dill
 matplotlib
 google-api-python-client
 pytube
 tensorflow
 pytube
-
+dill
+tensorflow
 -e .
